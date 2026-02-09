@@ -1,9 +1,11 @@
-// app/blog/[slug]/page.tsx
+// app/(marketing)/blog/[slug]/page.tsx
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { createClient } from "@supabase/supabase-js";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import type { ComponentPropsWithoutRef } from "react";
 
 export const revalidate = 300;
 
@@ -22,6 +24,17 @@ type BlogPost = {
   updated_at: string | null;
   reading_minutes: number | null;
   content_mdx: string;
+};
+
+type RelatedPost = Pick<
+  BlogPost,
+  "slug" | "title" | "category" | "reading_minutes" | "published_at"
+>;
+
+// ✅ Next.js 15: params/searchParams are async
+type PageProps = {
+  params: Promise<{ slug: string }>;
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 };
 
 function supabasePublic() {
@@ -47,8 +60,7 @@ async function getPost(slug: string): Promise<BlogPost | null> {
   if (!allowDraft) q = q.eq("status", "published");
 
   const { data, error } = await q.maybeSingle<BlogPost>();
-  if (error) return null;
-  if (!data) return null;
+  if (error || !data) return null;
 
   // Guard: don’t show drafts in prod
   if (!allowDraft && data.status !== "published") return null;
@@ -56,8 +68,9 @@ async function getPost(slug: string): Promise<BlogPost | null> {
   return data;
 }
 
-async function getRelated(post: BlogPost): Promise<Pick<BlogPost, "slug" | "title" | "category" | "reading_minutes" | "published_at">[]> {
+async function getRelated(post: BlogPost): Promise<RelatedPost[]> {
   const sb = supabasePublic();
+
   const { data } = await sb
     .from("blog_posts")
     .select("slug,title,category,reading_minutes,published_at")
@@ -67,18 +80,24 @@ async function getRelated(post: BlogPost): Promise<Pick<BlogPost, "slug" | "titl
     .order("published_at", { ascending: false })
     .limit(3);
 
-  return (data as any) ?? [];
+  return (data ?? []) as RelatedPost[];
 }
 
 function fmtDate(iso?: string | null) {
   if (!iso) return null;
   const dt = new Date(iso);
   if (Number.isNaN(dt.getTime())) return null;
-  return dt.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+  return dt.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }) {
-  const post = await getPost(params.slug);
+export async function generateMetadata(props: PageProps): Promise<Metadata> {
+  const { slug } = await props.params;
+
+  const post = await getPost(slug);
   if (!post) return {};
 
   const title = post.seo_title || post.title;
@@ -97,15 +116,20 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 const mdxComponents = {
-  a: (props: any) => (
-    <a
-      {...props}
-      className="font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-500"
-      target={props.href?.startsWith("http") ? "_blank" : undefined}
-      rel={props.href?.startsWith("http") ? "noreferrer" : undefined}
-    />
-  ),
-  blockquote: (props: any) => (
+  a: (props: ComponentPropsWithoutRef<"a">) => {
+    const href = typeof props.href === "string" ? props.href : "";
+    const isExternal = href.startsWith("http");
+
+    return (
+      <a
+        {...props}
+        className="font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-500"
+        target={isExternal ? "_blank" : props.target}
+        rel={isExternal ? "noreferrer" : props.rel}
+      />
+    );
+  },
+  blockquote: (props: ComponentPropsWithoutRef<"blockquote">) => (
     <blockquote
       {...props}
       className="my-6 border-l-2 border-slate-300 bg-slate-50 px-4 py-3 text-slate-700"
@@ -113,9 +137,11 @@ const mdxComponents = {
   ),
 };
 
-export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = await getPost(params.slug);
-  if (!post) return notFound();
+export default async function BlogPostPage(props: PageProps) {
+  const { slug } = await props.params;
+
+  const post = await getPost(slug);
+  if (!post) notFound();
 
   const related = await getRelated(post);
 
@@ -123,7 +149,10 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
     <main className="min-h-screen bg-white">
       <header className="border-b border-slate-200">
         <div className="mx-auto max-w-3xl px-4 py-10 sm:px-6">
-          <Link href="/blog" className="text-sm font-semibold text-slate-700 hover:underline">
+          <Link
+            href="/blog"
+            className="text-sm font-semibold text-slate-700 hover:underline"
+          >
             ← Back to Blog
           </Link>
 
@@ -137,13 +166,17 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             >
               {post.category}
             </span>
+
             {post.state_code ? (
               <span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-700">
                 {post.state_code}
               </span>
             ) : null}
+
             {post.reading_minutes ? (
-              <span className="text-xs text-slate-500">{post.reading_minutes} min</span>
+              <span className="text-xs text-slate-500">
+                {post.reading_minutes} min
+              </span>
             ) : null}
           </div>
 
@@ -151,7 +184,9 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
             {post.title}
           </h1>
 
-          <p className="mt-4 text-base leading-relaxed text-slate-600">{post.excerpt}</p>
+          <p className="mt-4 text-base leading-relaxed text-slate-600">
+            {post.excerpt}
+          </p>
 
           <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-500">
             {post.published_at ? <span>Published {fmtDate(post.published_at)}</span> : null}
@@ -177,15 +212,17 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
           <MDXRemote
             source={post.content_mdx}
             options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
-            components={mdxComponents as any}
+            // MDXRemote's type here is permissive; this is safe.
+            components={mdxComponents}
           />
         </article>
 
-        {/* Soft CTA band */}
         <div className="mt-12 rounded-3xl border border-slate-200 bg-slate-50 p-6">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <div className="text-sm font-semibold text-slate-900">Want the clean setup checklist?</div>
+              <div className="text-sm font-semibold text-slate-900">
+                Want the clean setup checklist?
+              </div>
               <div className="mt-1 text-sm text-slate-600">
                 The fastest way to get employer-ready and keep records clean from day one.
               </div>
