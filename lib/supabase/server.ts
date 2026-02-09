@@ -1,6 +1,11 @@
 // lib/supabase/server.ts
+import "server-only";
+
 import { cookies } from "next/headers";
 import { createServerClient } from "@supabase/ssr";
+import { createClient as createSupabaseAdminClient } from "@supabase/supabase-js";
+import type { SupabaseClient } from "@supabase/supabase-js";
+
 import { getSupabasePublicEnv } from "./env";
 
 /**
@@ -26,10 +31,8 @@ function setCookieSafe(
   // - cookieStore.set(name, value, options)
   // - cookieStore.set({ name, value, ...options })
   try {
-    
     cookieStore.set(name, value, options);
   } catch {
-    
     cookieStore.set({ name, value, ...(options ?? {}) });
   }
 }
@@ -83,3 +86,50 @@ export async function createSupabaseServerComponentClient() {
 export async function getSupabaseServerClient() {
   return createSupabaseServerComponentClient();
 }
+
+/**
+ * Admin client (Service Role) for server-only usage.
+ *
+ * This is exported as `supabaseAdmin` to match your API route imports:
+ *   import { supabaseAdmin } from "@/lib/supabase/server";
+ *
+ * Notes:
+ * - Uses a lazy-initialized client so builds won't fail during static analysis.
+ * - Throws a clear runtime error if required env vars are missing.
+ * - Never use this on the client.
+ */
+let _admin: SupabaseClient | null = null;
+
+function getSupabaseAdminClient(): SupabaseClient {
+  if (_admin) return _admin;
+
+  // Prefer public URL var (commonly used in Next apps), fallback to SUPABASE_URL.
+  const url =
+    process.env.NEXT_PUBLIC_SUPABASE_URL ||
+    process.env.SUPABASE_URL ||
+    "";
+
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
+
+  if (!url || !serviceKey) {
+    throw new Error(
+      "Missing Supabase admin env vars. Set NEXT_PUBLIC_SUPABASE_URL (or SUPABASE_URL) and SUPABASE_SERVICE_ROLE_KEY in your environment."
+    );
+  }
+
+  _admin = createSupabaseAdminClient(url, serviceKey, {
+    auth: {
+      persistSession: false,
+      autoRefreshToken: false,
+      detectSessionInUrl: false,
+    },
+  });
+
+  return _admin;
+}
+
+export const supabaseAdmin: SupabaseClient = new Proxy({} as SupabaseClient, {
+  get(_target, prop) {
+    return (getSupabaseAdminClient() as any)[prop];
+  },
+}) as SupabaseClient;
