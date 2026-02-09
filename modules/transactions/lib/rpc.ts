@@ -66,7 +66,7 @@ export async function upsertTransaction(params: UpsertTransactionParams): Promis
   const src = clampText(source || "csv", 32);
 
   try {
-    const db = supabaseAdmin();
+    const db = supabaseAdmin;
 
     const { error } = await db.rpc("upsert_transaction", {
       p_company_id: companyId,

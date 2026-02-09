@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     //   }
     // }
 
-    const db = supabaseAdmin();
+    const db = supabaseAdmin;
     const a = body.answers ?? {};
     const { data, error } = await db.rpc("submit_readiness_assessment", {
       p_company: body.companyId,

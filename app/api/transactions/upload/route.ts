@@ -153,7 +153,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "CSV appears empty or malformed." }, { status: 400 });
     }
 
-    const db = supabaseAdmin();
+    const db = supabaseAdmin;
 
     // Upload original CSV to storage for audit trail
     const bucket = process.env.NEXT_PUBLIC_DOCS_BUCKET;

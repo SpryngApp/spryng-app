@@ -46,7 +46,8 @@ export async function POST(req: Request) {
       return NextResponse.json({ ok: false, error: "Payee name is required." }, { status: 400 });
     }
 
-    const db = supabaseAdmin();
+    const db = supabaseAdmin;
+
 
     // ---- Find existing payee by company + (name OR display_name) (case-insensitive exact match) ----
     const { data: existingCandidates, error: findErr } = await db

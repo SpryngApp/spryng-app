@@ -54,7 +54,7 @@ async function fromView<T>(
     return { data: [], error: "Invalid companyId (uuid required)." };
   }
 
-  const db = supabaseAdmin();
+  const db = supabaseAdmin;
   const { data, error } = await db
     .from(view)
     .select("*")
