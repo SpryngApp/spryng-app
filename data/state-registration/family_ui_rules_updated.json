@@ -1,0 +1,1608 @@
+[
+  {
+    "state_code": "AL",
+    "state_name": "Alabama",
+    "status": "complete",
+    "last_verified": "2026-02-05",
+    "source_primary_url": "https://labor.alabama.gov/docs/guides/uc_emp_handbook_rev_2021.pdf",
+    "notes": [
+      "Alabama UC employer handbook lists family-member exclusions for individual owners and notes limits for corporations and partnerships."
+    ],
+    "todo": [],
+    "rules": [
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "For an individual owner, wages paid to a spouse/parent/child under 21 are excluded from Alabama UI employment and not reported for UI.",
+        "authority": {
+          "source_url": "https://labor.alabama.gov/docs/guides/uc_emp_handbook_rev_2021.pdf",
+          "source_title": "EMPLOYER HANDBOOK Unemployment Compensation (Alabama Department of Labor)",
+          "pinpoint": "EXCLUSIONS (Employer Handbook)",
+          "supporting_quote": "The individual owner of a business is not an employee, nor the parents, spouse, or the owners’ children under the age of 21."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "child",
+        "age_condition": {
+          "applies": true,
+          "operator": "<",
+          "age_years": 21
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "For an individual owner, wages paid to a spouse/parent/child under 21 are excluded from Alabama UI employment and not reported for UI.",
+        "authority": {
+          "source_url": "https://labor.alabama.gov/docs/guides/uc_emp_handbook_rev_2021.pdf",
+          "source_title": "EMPLOYER HANDBOOK Unemployment Compensation (Alabama Department of Labor)",
+          "pinpoint": "EXCLUSIONS (Employer Handbook)",
+          "supporting_quote": "The individual owner of a business is not an employee, nor the parents, spouse, or the owners’ children under the age of 21."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "For an individual owner, wages paid to a spouse/parent/child under 21 are excluded from Alabama UI employment and not reported for UI.",
+        "authority": {
+          "source_url": "https://labor.alabama.gov/docs/guides/uc_emp_handbook_rev_2021.pdf",
+          "source_title": "EMPLOYER HANDBOOK Unemployment Compensation (Alabama Department of Labor)",
+          "pinpoint": "EXCLUSIONS (Employer Handbook)",
+          "supporting_quote": "The individual owner of a business is not an employee, nor the parents, spouse, or the owners’ children under the age of 21."
+        }
+      },
+      {
+        "employer_entity_type": "partnership_mml",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "depends",
+        "wage_reporting_effect": "depends",
+        "conditions_text": "For a partnership, Alabama notes the family exclusion can depend on partners’ relationships to the worker.",
+        "authority": {
+          "source_url": "https://labor.alabama.gov/docs/guides/uc_emp_handbook_rev_2021.pdf",
+          "source_title": "EMPLOYER HANDBOOK Unemployment Compensation (Alabama Department of Labor)",
+          "pinpoint": "EXCLUSIONS (Employer Handbook)",
+          "supporting_quote": "Family partnerships may have this exclusion applied based on the relationship of partners to workers."
+        }
+      },
+      {
+        "employer_entity_type": "partnership_mml",
+        "relationship": "child",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "depends",
+        "wage_reporting_effect": "depends",
+        "conditions_text": "For a partnership, Alabama notes the family exclusion can depend on partners’ relationships to the worker.",
+        "authority": {
+          "source_url": "https://labor.alabama.gov/docs/guides/uc_emp_handbook_rev_2021.pdf",
+          "source_title": "EMPLOYER HANDBOOK Unemployment Compensation (Alabama Department of Labor)",
+          "pinpoint": "EXCLUSIONS (Employer Handbook)",
+          "supporting_quote": "Family partnerships may have this exclusion applied based on the relationship of partners to workers."
+        }
+      },
+      {
+        "employer_entity_type": "partnership_mml",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "depends",
+        "wage_reporting_effect": "depends",
+        "conditions_text": "For a partnership, Alabama notes the family exclusion can depend on partners’ relationships to the worker.",
+        "authority": {
+          "source_url": "https://labor.alabama.gov/docs/guides/uc_emp_handbook_rev_2021.pdf",
+          "source_title": "EMPLOYER HANDBOOK Unemployment Compensation (Alabama Department of Labor)",
+          "pinpoint": "EXCLUSIONS (Employer Handbook)",
+          "supporting_quote": "Family partnerships may have this exclusion applied based on the relationship of partners to workers."
+        }
+      },
+      {
+        "employer_entity_type": "s_corp",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "If the business is a corporation, the Alabama handbook says this family exclusion does not apply; wages are reportable.",
+        "authority": {
+          "source_url": "https://labor.alabama.gov/docs/guides/uc_emp_handbook_rev_2021.pdf",
+          "source_title": "EMPLOYER HANDBOOK Unemployment Compensation (Alabama Department of Labor)",
+          "pinpoint": "EXCLUSIONS (Employer Handbook)",
+          "supporting_quote": "This exclusion does not apply if the entity is a corporation or non-family partnership."
+        }
+      },
+      {
+        "employer_entity_type": "s_corp",
+        "relationship": "child",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "If the business is a corporation, the Alabama handbook says this family exclusion does not apply; wages are reportable.",
+        "authority": {
+          "source_url": "https://labor.alabama.gov/docs/guides/uc_emp_handbook_rev_2021.pdf",
+          "source_title": "EMPLOYER HANDBOOK Unemployment Compensation (Alabama Department of Labor)",
+          "pinpoint": "EXCLUSIONS (Employer Handbook)",
+          "supporting_quote": "This exclusion does not apply if the entity is a corporation or non-family partnership."
+        }
+      },
+      {
+        "employer_entity_type": "s_corp",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "If the business is a corporation, the Alabama handbook says this family exclusion does not apply; wages are reportable.",
+        "authority": {
+          "source_url": "https://labor.alabama.gov/docs/guides/uc_emp_handbook_rev_2021.pdf",
+          "source_title": "EMPLOYER HANDBOOK Unemployment Compensation (Alabama Department of Labor)",
+          "pinpoint": "EXCLUSIONS (Employer Handbook)",
+          "supporting_quote": "This exclusion does not apply if the entity is a corporation or non-family partnership."
+        }
+      }
+    ]
+  },
+  {
+    "state_code": "AK",
+    "state_name": "Alaska",
+    "status": "complete",
+    "last_verified": "2026-02-05",
+    "source_primary_url": "https://labor.alaska.gov/estax/newsletters/newsltr0224.pdf",
+    "notes": [
+      "Alaska UI Tax newsletter (June 2024) explains how wages paid to a parent/spouse/child are reported differently for sole proprietors, partnerships, and LLCs.",
+      "For sole proprietors, exclusions apply unless the sole proprietor elects coverage."
+    ],
+    "todo": [],
+    "rules": [
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "If you’re a sole proprietor and you pay your spouse for work, those wages are not reported for Alaska UI tax unless you elect coverage.",
+        "authority": {
+          "source_url": "https://labor.alaska.gov/estax/newsletters/newsltr0224.pdf",
+          "source_title": "Alaska Employer Newsletter — Unemployment Insurance Tax (June 2024)",
+          "pinpoint": "Children's wages (Alaska Employer Newsletter)",
+          "supporting_quote": "of a sole proprietor should not be reported on the quarterly contribution report, unless the sole proprietor has elected coverage."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "If you’re a sole proprietor and you pay a parent for work, those wages are not reported for Alaska UI tax unless you elect coverage.",
+        "authority": {
+          "source_url": "https://labor.alaska.gov/estax/newsletters/newsltr0224.pdf",
+          "source_title": "Alaska Employer Newsletter — Unemployment Insurance Tax (June 2024)",
+          "pinpoint": "Children's wages (Alaska Employer Newsletter)",
+          "supporting_quote": "of a sole proprietor should not be reported on the quarterly contribution report, unless the sole proprietor has elected coverage."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "child",
+        "age_condition": {
+          "applies": true,
+          "operator": "<",
+          "age_years": 18
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "If you’re a sole proprietor and you pay your child under 18 for work, those wages are not reported for Alaska UI tax unless you elect coverage.",
+        "authority": {
+          "source_url": "https://labor.alaska.gov/estax/newsletters/newsltr0224.pdf",
+          "source_title": "Alaska Employer Newsletter — Unemployment Insurance Tax (June 2024)",
+          "pinpoint": "Children's wages (Alaska Employer Newsletter)",
+          "supporting_quote": "of a sole proprietor should not be reported on the quarterly contribution report, unless the sole proprietor has elected coverage."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "child",
+        "age_condition": {
+          "applies": true,
+          "operator": "<",
+          "age_years": 21
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "If you’re a sole proprietor and you pay your child (a full‑time student) under 21, those wages are not reported for Alaska UI tax unless you elect coverage.",
+        "authority": {
+          "source_url": "https://labor.alaska.gov/estax/newsletters/newsltr0224.pdf",
+          "source_title": "Alaska Employer Newsletter — Unemployment Insurance Tax (June 2024)",
+          "pinpoint": "Children's wages (Alaska Employer Newsletter)",
+          "supporting_quote": "of a sole proprietor should not be reported on the quarterly contribution report, unless the sole proprietor has elected coverage."
+        }
+      },
+      {
+        "employer_entity_type": "partnership_mml",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "For an Alaska partnership, wages paid to a spouse/parent/child are reportable for UI tax.",
+        "authority": {
+          "source_url": "https://labor.alaska.gov/estax/newsletters/newsltr0224.pdf",
+          "source_title": "Alaska Employer Newsletter — Unemployment Insurance Tax (June 2024)",
+          "pinpoint": "Children's wages (Alaska Employer Newsletter)",
+          "supporting_quote": "A parent, spouse or child of a partnership is reportable"
+        }
+      },
+      {
+        "employer_entity_type": "partnership_mml",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "For an Alaska partnership, wages paid to a spouse/parent/child are reportable for UI tax.",
+        "authority": {
+          "source_url": "https://labor.alaska.gov/estax/newsletters/newsltr0224.pdf",
+          "source_title": "Alaska Employer Newsletter — Unemployment Insurance Tax (June 2024)",
+          "pinpoint": "Children's wages (Alaska Employer Newsletter)",
+          "supporting_quote": "A parent, spouse or child of a partnership is reportable"
+        }
+      },
+      {
+        "employer_entity_type": "partnership_mml",
+        "relationship": "child",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "For an Alaska partnership, wages paid to a spouse/parent/child are reportable for UI tax.",
+        "authority": {
+          "source_url": "https://labor.alaska.gov/estax/newsletters/newsltr0224.pdf",
+          "source_title": "Alaska Employer Newsletter — Unemployment Insurance Tax (June 2024)",
+          "pinpoint": "Children's wages (Alaska Employer Newsletter)",
+          "supporting_quote": "A parent, spouse or child of a partnership is reportable"
+        }
+      },
+      {
+        "employer_entity_type": "llc_unsure",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "For an Alaska LLC, if your spouse/parent/child is not an LLC member and performs services, the wages are reportable for UI tax.",
+        "authority": {
+          "source_url": "https://labor.alaska.gov/estax/newsletters/newsltr0224.pdf",
+          "source_title": "Alaska Employer Newsletter — Unemployment Insurance Tax (June 2024)",
+          "pinpoint": "Children's wages (Alaska Employer Newsletter)",
+          "supporting_quote": "who is not a member of a Limited Liability Company (LLC) and performs services for the business is reportable"
+        }
+      },
+      {
+        "employer_entity_type": "llc_unsure",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "For an Alaska LLC, if your spouse/parent/child is not an LLC member and performs services, the wages are reportable for UI tax.",
+        "authority": {
+          "source_url": "https://labor.alaska.gov/estax/newsletters/newsltr0224.pdf",
+          "source_title": "Alaska Employer Newsletter — Unemployment Insurance Tax (June 2024)",
+          "pinpoint": "Children's wages (Alaska Employer Newsletter)",
+          "supporting_quote": "who is not a member of a Limited Liability Company (LLC) and performs services for the business is reportable"
+        }
+      },
+      {
+        "employer_entity_type": "llc_unsure",
+        "relationship": "child",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "For an Alaska LLC, if your spouse/parent/child is not an LLC member and performs services, the wages are reportable for UI tax.",
+        "authority": {
+          "source_url": "https://labor.alaska.gov/estax/newsletters/newsltr0224.pdf",
+          "source_title": "Alaska Employer Newsletter — Unemployment Insurance Tax (June 2024)",
+          "pinpoint": "Children's wages (Alaska Employer Newsletter)",
+          "supporting_quote": "who is not a member of a Limited Liability Company (LLC) and performs services for the business is reportable"
+        }
+      }
+    ]
+  },
+  {
+    "state_code": "AZ",
+    "state_name": "Arizona",
+    "status": "complete",
+    "last_verified": "2026-02-05",
+    "source_primary_url": "https://des.az.gov/services/employment/unemployment-employer/employer-handbook-unemployment-insurance-tax/employees-and-wages",
+    "notes": [
+      "Arizona DES employer handbook page lists family-member exclusions and when the family exemption does not apply (corporations, certain partnerships, and certain LLC tax classifications)."
+    ],
+    "todo": [],
+    "rules": [
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "In Arizona, some family services are excluded (e.g., working for your spouse, or a child under 21 working for a parent), unless the family exemption is overridden by entity type.",
+        "authority": {
+          "source_url": "https://des.az.gov/services/employment/unemployment-employer/employer-handbook-unemployment-insurance-tax/employees-and-wages",
+          "source_title": "Unemployment Insurance Tax - Employees and Wages FAQ (Arizona DES)",
+          "pinpoint": "What Is Exempt Employment? (Employees and Wages)",
+          "supporting_quote": "Individuals employed by their son, daughter or spouse, and individuals under the age of 21 years employed by their father or mother."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "child",
+        "age_condition": {
+          "applies": true,
+          "operator": "<",
+          "age_years": 21
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "In Arizona, some family services are excluded (e.g., working for your spouse, or a child under 21 working for a parent), unless the family exemption is overridden by entity type.",
+        "authority": {
+          "source_url": "https://des.az.gov/services/employment/unemployment-employer/employer-handbook-unemployment-insurance-tax/employees-and-wages",
+          "source_title": "Unemployment Insurance Tax - Employees and Wages FAQ (Arizona DES)",
+          "pinpoint": "What Is Exempt Employment? (Employees and Wages)",
+          "supporting_quote": "Individuals employed by their son, daughter or spouse, and individuals under the age of 21 years employed by their father or mother."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "In Arizona, some family services are excluded (e.g., working for your spouse, or a child under 21 working for a parent), unless the family exemption is overridden by entity type.",
+        "authority": {
+          "source_url": "https://des.az.gov/services/employment/unemployment-employer/employer-handbook-unemployment-insurance-tax/employees-and-wages",
+          "source_title": "Unemployment Insurance Tax - Employees and Wages FAQ (Arizona DES)",
+          "pinpoint": "What Is Exempt Employment? (Employees and Wages)",
+          "supporting_quote": "Individuals employed by their son, daughter or spouse, and individuals under the age of 21 years employed by their father or mother."
+        }
+      },
+      {
+        "employer_entity_type": "s_corp",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "Arizona says the family exemption does not apply when the employer is a corporation; wages are reportable.",
+        "authority": {
+          "source_url": "https://des.az.gov/services/employment/unemployment-employer/employer-handbook-unemployment-insurance-tax/employees-and-wages",
+          "source_title": "Unemployment Insurance Tax - Employees and Wages FAQ (Arizona DES)",
+          "pinpoint": "What Is Exempt Employment? (Employees and Wages)",
+          "supporting_quote": "The employer is a corporation (this includes Subchapter S corporations)"
+        }
+      },
+      {
+        "employer_entity_type": "s_corp",
+        "relationship": "child",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "Arizona says the family exemption does not apply when the employer is a corporation; wages are reportable.",
+        "authority": {
+          "source_url": "https://des.az.gov/services/employment/unemployment-employer/employer-handbook-unemployment-insurance-tax/employees-and-wages",
+          "source_title": "Unemployment Insurance Tax - Employees and Wages FAQ (Arizona DES)",
+          "pinpoint": "What Is Exempt Employment? (Employees and Wages)",
+          "supporting_quote": "The employer is a corporation (this includes Subchapter S corporations)"
+        }
+      },
+      {
+        "employer_entity_type": "s_corp",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "Arizona says the family exemption does not apply when the employer is a corporation; wages are reportable.",
+        "authority": {
+          "source_url": "https://des.az.gov/services/employment/unemployment-employer/employer-handbook-unemployment-insurance-tax/employees-and-wages",
+          "source_title": "Unemployment Insurance Tax - Employees and Wages FAQ (Arizona DES)",
+          "pinpoint": "What Is Exempt Employment? (Employees and Wages)",
+          "supporting_quote": "The employer is a corporation (this includes Subchapter S corporations)"
+        }
+      },
+      {
+        "employer_entity_type": "partnership_mml",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "depends",
+        "wage_reporting_effect": "depends",
+        "conditions_text": "For partnerships (and multi‑member LLCs taxed as partnerships), the family exemption can depend on whether the relationship exists with all partners/members.",
+        "authority": {
+          "source_url": "https://des.az.gov/services/employment/unemployment-employer/employer-handbook-unemployment-insurance-tax/employees-and-wages",
+          "source_title": "Unemployment Insurance Tax - Employees and Wages FAQ (Arizona DES)",
+          "pinpoint": "What Is Exempt Employment? (Employees and Wages)",
+          "supporting_quote": "unless an exempt family relationship exists between the employee and all of the partners or members"
+        }
+      },
+      {
+        "employer_entity_type": "partnership_mml",
+        "relationship": "child",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "depends",
+        "wage_reporting_effect": "depends",
+        "conditions_text": "For partnerships (and multi‑member LLCs taxed as partnerships), the family exemption can depend on whether the relationship exists with all partners/members.",
+        "authority": {
+          "source_url": "https://des.az.gov/services/employment/unemployment-employer/employer-handbook-unemployment-insurance-tax/employees-and-wages",
+          "source_title": "Unemployment Insurance Tax - Employees and Wages FAQ (Arizona DES)",
+          "pinpoint": "What Is Exempt Employment? (Employees and Wages)",
+          "supporting_quote": "unless an exempt family relationship exists between the employee and all of the partners or members"
+        }
+      },
+      {
+        "employer_entity_type": "partnership_mml",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "depends",
+        "wage_reporting_effect": "depends",
+        "conditions_text": "For partnerships (and multi‑member LLCs taxed as partnerships), the family exemption can depend on whether the relationship exists with all partners/members.",
+        "authority": {
+          "source_url": "https://des.az.gov/services/employment/unemployment-employer/employer-handbook-unemployment-insurance-tax/employees-and-wages",
+          "source_title": "Unemployment Insurance Tax - Employees and Wages FAQ (Arizona DES)",
+          "pinpoint": "What Is Exempt Employment? (Employees and Wages)",
+          "supporting_quote": "unless an exempt family relationship exists between the employee and all of the partners or members"
+        }
+      },
+      {
+        "employer_entity_type": "llc_unsure",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "depends",
+        "wage_reporting_effect": "depends",
+        "conditions_text": "For LLCs, Arizona ties the family exemption to how the LLC is treated for federal tax purposes (corporation vs partnership/sole prop).",
+        "authority": {
+          "source_url": "https://des.az.gov/services/employment/unemployment-employer/employer-handbook-unemployment-insurance-tax/employees-and-wages",
+          "source_title": "Unemployment Insurance Tax - Employees and Wages FAQ (Arizona DES)",
+          "pinpoint": "What Is Exempt Employment? (Employees and Wages)",
+          "supporting_quote": "a partnership or limited liability company (LLC) treated as a corporation for federal tax purposes"
+        }
+      },
+      {
+        "employer_entity_type": "llc_unsure",
+        "relationship": "child",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "depends",
+        "wage_reporting_effect": "depends",
+        "conditions_text": "For LLCs, Arizona ties the family exemption to how the LLC is treated for federal tax purposes (corporation vs partnership/sole prop).",
+        "authority": {
+          "source_url": "https://des.az.gov/services/employment/unemployment-employer/employer-handbook-unemployment-insurance-tax/employees-and-wages",
+          "source_title": "Unemployment Insurance Tax - Employees and Wages FAQ (Arizona DES)",
+          "pinpoint": "What Is Exempt Employment? (Employees and Wages)",
+          "supporting_quote": "a partnership or limited liability company (LLC) treated as a corporation for federal tax purposes"
+        }
+      },
+      {
+        "employer_entity_type": "llc_unsure",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "depends",
+        "wage_reporting_effect": "depends",
+        "conditions_text": "For LLCs, Arizona ties the family exemption to how the LLC is treated for federal tax purposes (corporation vs partnership/sole prop).",
+        "authority": {
+          "source_url": "https://des.az.gov/services/employment/unemployment-employer/employer-handbook-unemployment-insurance-tax/employees-and-wages",
+          "source_title": "Unemployment Insurance Tax - Employees and Wages FAQ (Arizona DES)",
+          "pinpoint": "What Is Exempt Employment? (Employees and Wages)",
+          "supporting_quote": "a partnership or limited liability company (LLC) treated as a corporation for federal tax purposes"
+        }
+      }
+    ]
+  },
+  {
+    "state_code": "AR",
+    "state_name": "Arkansas",
+    "status": "partial",
+    "last_verified": "2026-02-05",
+    "source_primary_url": "https://dws.arkansas.gov/wp-content/uploads/Employer_Handbook_20220811.pdf",
+    "notes": [
+      "Arkansas DWS Employer Handbook lists family employment as 'Exempt Employment' (working for a son/daughter/spouse; child under 21 working for a parent)."
+    ],
+    "todo": [
+      "Confirm whether Arkansas has additional family exclusions (e.g., parent employed by child beyond the handbook bullet) in statute/rules and any entity-type limitations."
+    ],
+    "rules": [
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "Arkansas lists work performed for your spouse (individual employer) as exempt employment for UI reporting.",
+        "authority": {
+          "source_url": "https://dws.arkansas.gov/wp-content/uploads/Employer_Handbook_20220811.pdf",
+          "source_title": "Arkansas Division of Workforce Services — Employer Handbook (Aug 2022)",
+          "pinpoint": "Exempt Employment (Employer Handbook)",
+          "supporting_quote": "Service performed by an individual in the employ of his /her son, daughter, or spouse."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "Arkansas lists work performed for your child (individual employer) as exempt employment for UI reporting.",
+        "authority": {
+          "source_url": "https://dws.arkansas.gov/wp-content/uploads/Employer_Handbook_20220811.pdf",
+          "source_title": "Arkansas Division of Workforce Services — Employer Handbook (Aug 2022)",
+          "pinpoint": "Exempt Employment (Employer Handbook)",
+          "supporting_quote": "Service performed by an individual in the employ of his /her son, daughter, or spouse."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "child",
+        "age_condition": {
+          "applies": true,
+          "operator": "<",
+          "age_years": 21
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "Arkansas lists a child under 21 working for a parent (individual employer) as exempt employment for UI reporting.",
+        "authority": {
+          "source_url": "https://dws.arkansas.gov/wp-content/uploads/Employer_Handbook_20220811.pdf",
+          "source_title": "Arkansas Division of Workforce Services — Employer Handbook (Aug 2022)",
+          "pinpoint": "Exempt Employment (Employer Handbook)",
+          "supporting_quote": "Service performed by a child under twenty-one years of age in the employ of his /her father or mother."
+        }
+      }
+    ]
+  },
+  {
+    "state_code": "CA",
+    "state_name": "California",
+    "status": "partial",
+    "last_verified": "2026-02-05",
+    "source_primary_url": "https://edd.ca.gov/siteassets/files/pdf_pub_ctr/de231fam.pdf",
+    "notes": [
+      "California EDD guidance summarizes CUIC §631 family employment exclusions (spouse, child under 18, and employment by an individual’s child/spouse).",
+      "EDD notes the §631 exclusion does not apply when the employing entity is a corporation."
+    ],
+    "todo": [
+      "Confirm how CUIC §631 family exclusions apply to partnerships and LLCs (including tax classifications)."
+    ],
+    "rules": [
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "child",
+        "age_condition": {
+          "applies": true,
+          "operator": "<",
+          "age_years": 18
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "If you pay your child under 18 to work for you as an individual employer, those wages are excluded from California UI coverage and not reported for UI.",
+        "authority": {
+          "source_url": "https://edd.ca.gov/siteassets/files/pdf_pub_ctr/de231fam.pdf",
+          "source_title": "Family Employment (EDD, DE 231FAM)",
+          "pinpoint": "CUIC §631 (EDD summary)",
+          "supporting_quote": "Employment does not include service performed by a child under the age of 18 years in the employ of his father or mother."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "If you pay your spouse to work for you as an individual employer, those wages are excluded from California UI coverage and not reported for UI.",
+        "authority": {
+          "source_url": "https://edd.ca.gov/siteassets/files/pdf_pub_ctr/de231fam.pdf",
+          "source_title": "Family Employment (EDD, DE 231FAM)",
+          "pinpoint": "CUIC §631 (EDD summary)",
+          "supporting_quote": "Employment does not include service performed by an individual in the employ of his son, daughter, or spouse."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "If you (as an individual) pay your parent for work and you are their child employer, that service is excluded from California UI coverage and not reported for UI.",
+        "authority": {
+          "source_url": "https://edd.ca.gov/siteassets/files/pdf_pub_ctr/de231fam.pdf",
+          "source_title": "Family Employment (EDD, DE 231FAM)",
+          "pinpoint": "CUIC §631 (EDD summary)",
+          "supporting_quote": "Employment does not include service performed by an individual in the employ of his son, daughter, or spouse."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "child",
+        "age_condition": {
+          "applies": true,
+          "operator": ">=",
+          "age_years": 18
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "Once your child is 18 or older, the EDD says the family exclusion no longer applies; wages are treated as covered employment for UI reporting.",
+        "authority": {
+          "source_url": "https://edd.ca.gov/siteassets/files/pdf_pub_ctr/de231fam.pdf",
+          "source_title": "Family Employment (EDD, DE 231FAM)",
+          "pinpoint": "EDD summary (Age)",
+          "supporting_quote": "As soon as a child reaches the age of 18, the exclusion no longer applies."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "stepchild",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "EDD guidance says stepchildren are not included in the child-under-18 family exclusion; treat wages as reportable unless another exclusion applies.",
+        "authority": {
+          "source_url": "https://edd.ca.gov/siteassets/files/pdf_pub_ctr/de231fam.pdf",
+          "source_title": "Family Employment (EDD, DE 231FAM)",
+          "pinpoint": "EDD summary (Who counts as child)",
+          "supporting_quote": "This exemption includes adopted children under 18 years, but stepchildren are not included."
+        }
+      },
+      {
+        "employer_entity_type": "s_corp",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "If the employing entity is a corporation, EDD says the family exclusion in CUIC §631 does not apply; treat wages as reportable for UI.",
+        "authority": {
+          "source_url": "https://edd.ca.gov/siteassets/files/pdf_pub_ctr/de231fam.pdf",
+          "source_title": "Family Employment (EDD, DE 231FAM)",
+          "pinpoint": "EDD summary (Corporations)",
+          "supporting_quote": "Section 631 of the California Unemployment Insurance Code does not apply if the employing entity is a corporation."
+        }
+      },
+      {
+        "employer_entity_type": "s_corp",
+        "relationship": "child",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "If the employing entity is a corporation, EDD says the family exclusion in CUIC §631 does not apply; treat wages as reportable for UI.",
+        "authority": {
+          "source_url": "https://edd.ca.gov/siteassets/files/pdf_pub_ctr/de231fam.pdf",
+          "source_title": "Family Employment (EDD, DE 231FAM)",
+          "pinpoint": "EDD summary (Corporations)",
+          "supporting_quote": "Section 631 of the California Unemployment Insurance Code does not apply if the employing entity is a corporation."
+        }
+      },
+      {
+        "employer_entity_type": "c_corp",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "If the employing entity is a corporation, EDD says the family exclusion in CUIC §631 does not apply; treat wages as reportable for UI.",
+        "authority": {
+          "source_url": "https://edd.ca.gov/siteassets/files/pdf_pub_ctr/de231fam.pdf",
+          "source_title": "Family Employment (EDD, DE 231FAM)",
+          "pinpoint": "EDD summary (Corporations)",
+          "supporting_quote": "Section 631 of the California Unemployment Insurance Code does not apply if the employing entity is a corporation."
+        }
+      },
+      {
+        "employer_entity_type": "c_corp",
+        "relationship": "child",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "If the employing entity is a corporation, EDD says the family exclusion in CUIC §631 does not apply; treat wages as reportable for UI.",
+        "authority": {
+          "source_url": "https://edd.ca.gov/siteassets/files/pdf_pub_ctr/de231fam.pdf",
+          "source_title": "Family Employment (EDD, DE 231FAM)",
+          "pinpoint": "EDD summary (Corporations)",
+          "supporting_quote": "Section 631 of the California Unemployment Insurance Code does not apply if the employing entity is a corporation."
+        }
+      }
+    ]
+  },
+  {
+    "state_code": "CO",
+    "state_name": "Colorado",
+    "status": "partial",
+    "last_verified": "2026-02-05",
+    "source_primary_url": "https://cdle.colorado.gov/sites/cdle/files/Colorado%20Employment%20Security%20Act%202025%20%28CESA%29.pdf",
+    "notes": [
+      "Colorado statute excludes services performed by an individual employed by their spouse, and services performed by a child under 21 employed by their parent."
+    ],
+    "todo": [
+      "Confirm whether Colorado has any additional family-member exclusions (e.g., parent employed by child) beyond C.R.S. §8-70-129.",
+      "Locate Colorado agency guidance clarifying how these exclusions apply to partnerships and LLCs."
+    ],
+    "rules": [
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "If you pay your spouse to work for you as an individual employer, Colorado excludes that service from UI employment.",
+        "authority": {
+          "source_url": "https://cdle.colorado.gov/sites/cdle/files/Colorado%20Employment%20Security%20Act%202025%20%28CESA%29.pdf",
+          "source_title": "Colorado Employment Security Act (CESA)",
+          "pinpoint": "C.R.S. § 8-70-129",
+          "supporting_quote": "Employment does not include services performed by an individual in the employ of his spouse."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "child",
+        "age_condition": {
+          "applies": true,
+          "operator": "<",
+          "age_years": 21
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "If you pay your child under 21 to work for you as an individual employer, Colorado excludes that service from UI employment.",
+        "authority": {
+          "source_url": "https://cdle.colorado.gov/sites/cdle/files/Colorado%20Employment%20Security%20Act%202025%20%28CESA%29.pdf",
+          "source_title": "Colorado Employment Security Act (CESA)",
+          "pinpoint": "C.R.S. § 8-70-129",
+          "supporting_quote": "service performed by a child under the age of twenty-one in the employ of his father or mother."
+        }
+      }
+    ]
+  },
+  {
+    "state_code": "CT",
+    "state_name": "Connecticut",
+    "status": "partial",
+    "last_verified": "2026-02-05",
+    "source_primary_url": "https://portal.ct.gov/dol/claimants/unemployment-insurance-claimants/guide-to-collecting-unemployment-benefits",
+    "notes": [
+      "Connecticut DOL claimant guide lists family employment examples under 'Employment Not Covered' (spouse for spouse; children under 21 working for a parent)."
+    ],
+    "todo": [
+      "Find the underlying Connecticut statute/regulation section for family employment exclusions and confirm any entity-type nuances (corporations, partnerships, LLCs)."
+    ],
+    "rules": [
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "child",
+        "age_condition": {
+          "applies": true,
+          "operator": "<",
+          "age_years": 21
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "Connecticut DOL lists children under 21 employed by a parent as employment not covered for UI.",
+        "authority": {
+          "source_url": "https://portal.ct.gov/dol/claimants/unemployment-insurance-claimants/guide-to-collecting-unemployment-benefits",
+          "source_title": "Guide to Collecting Unemployment Benefits (Connecticut DOL)",
+          "pinpoint": "Employment Not Covered (Claimant guide)",
+          "supporting_quote": "Children under 21 employed by a parent and anyone employed by his or her spouse."
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "Connecticut DOL lists someone employed by their spouse as employment not covered for UI.",
+        "authority": {
+          "source_url": "https://portal.ct.gov/dol/claimants/unemployment-insurance-claimants/guide-to-collecting-unemployment-benefits",
+          "source_title": "Guide to Collecting Unemployment Benefits (Connecticut DOL)",
+          "pinpoint": "Employment Not Covered (Claimant guide)",
+          "supporting_quote": "Children under 21 employed by a parent and anyone employed by his or her spouse."
+        }
+      }
+    ]
+  },
+  {
+    "state_code": "DE",
+    "state_name": "Delaware",
+    "status": "partial",
+    "last_verified": "2026-02-05",
+    "source_primary_url": "https://laborfiles.delaware.gov/main/documents/Unemployment_Insurance/UI_EmployerHandbook.pdf",
+    "notes": [
+      "Delaware employer handbook describes family employment exclusions for individual employers and notes that work for a corporation run by family is still considered employment."
+    ],
+    "todo": [
+      "Confirm Delaware statute/rule citation for the handbook's family employment section.",
+      "Clarify treatment for partnerships/LLCs beyond the handbook examples."
+    ],
+    "rules": [
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "Delaware excludes UI employment when an individual works directly for their spouse (individual employer).",
+        "authority": {
+          "source_url": "https://laborfiles.delaware.gov/main/documents/Unemployment_Insurance/UI_EmployerHandbook.pdf",
+          "source_title": "Delaware Unemployment Insurance Employer Handbook",
+          "pinpoint": "Family Employment (Employer Handbook)",
+          "supporting_quote": "By an individual in the employ of a son, daughter or spouse"
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "Delaware excludes UI employment when an individual works directly for their child (individual employer).",
+        "authority": {
+          "source_url": "https://laborfiles.delaware.gov/main/documents/Unemployment_Insurance/UI_EmployerHandbook.pdf",
+          "source_title": "Delaware Unemployment Insurance Employer Handbook",
+          "pinpoint": "Family Employment (Employer Handbook)",
+          "supporting_quote": "By an individual in the employ of a son, daughter or spouse"
+        }
+      },
+      {
+        "employer_entity_type": "sole_prop_sml",
+        "relationship": "child",
+        "age_condition": {
+          "applies": true,
+          "operator": "<",
+          "age_years": 18
+        },
+        "coverage_effect": "excluded_from_ui_coverage",
+        "wage_reporting_effect": "excluded_from_wage_reporting",
+        "conditions_text": "Delaware excludes UI employment when a child under 18 works directly for a parent (individual employer).",
+        "authority": {
+          "source_url": "https://laborfiles.delaware.gov/main/documents/Unemployment_Insurance/UI_EmployerHandbook.pdf",
+          "source_title": "Delaware Unemployment Insurance Employer Handbook",
+          "pinpoint": "Family Employment (Employer Handbook)",
+          "supporting_quote": "service performed by a child under the age of 18 in the employ of his father or mother"
+        }
+      },
+      {
+        "employer_entity_type": "c_corp",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "Delaware says the family exclusion does not apply when the worker is employed by a corporation run by family; treat wages as reportable.",
+        "authority": {
+          "source_url": "https://laborfiles.delaware.gov/main/documents/Unemployment_Insurance/UI_EmployerHandbook.pdf",
+          "source_title": "Delaware Unemployment Insurance Employer Handbook",
+          "pinpoint": "Family Employment (Employer Handbook)",
+          "supporting_quote": "if the individual is employed by a corporation run by a son, daughter or spouse, it is considered employment"
+        }
+      },
+      {
+        "employer_entity_type": "c_corp",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "Delaware says the family exclusion does not apply when the worker is employed by a corporation run by family; treat wages as reportable.",
+        "authority": {
+          "source_url": "https://laborfiles.delaware.gov/main/documents/Unemployment_Insurance/UI_EmployerHandbook.pdf",
+          "source_title": "Delaware Unemployment Insurance Employer Handbook",
+          "pinpoint": "Family Employment (Employer Handbook)",
+          "supporting_quote": "if the individual is employed by a corporation run by a son, daughter or spouse, it is considered employment"
+        }
+      },
+      {
+        "employer_entity_type": "s_corp",
+        "relationship": "parent",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "Delaware says the family exclusion does not apply when the worker is employed by a corporation run by family; treat wages as reportable.",
+        "authority": {
+          "source_url": "https://laborfiles.delaware.gov/main/documents/Unemployment_Insurance/UI_EmployerHandbook.pdf",
+          "source_title": "Delaware Unemployment Insurance Employer Handbook",
+          "pinpoint": "Family Employment (Employer Handbook)",
+          "supporting_quote": "if the individual is employed by a corporation run by a son, daughter or spouse, it is considered employment"
+        }
+      },
+      {
+        "employer_entity_type": "s_corp",
+        "relationship": "spouse",
+        "age_condition": {
+          "applies": null,
+          "operator": null,
+          "age_years": null
+        },
+        "coverage_effect": "included_as_covered_employment",
+        "wage_reporting_effect": "included_in_wage_reporting",
+        "conditions_text": "Delaware says the family exclusion does not apply when the worker is employed by a corporation run by family; treat wages as reportable.",
+        "authority": {
+          "source_url": "https://laborfiles.delaware.gov/main/documents/Unemployment_Insurance/UI_EmployerHandbook.pdf",
+          "source_title": "Delaware Unemployment Insurance Employer Handbook",
+          "pinpoint": "Family Employment (Employer Handbook)",
+          "supporting_quote": "if the individual is employed by a corporation run by a son, daughter or spouse, it is considered employment"
+        }
+      }
+    ]
+  },
+  {
+    "state_code": "FL",
+    "state_name": "Florida",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Florida and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "GA",
+    "state_name": "Georgia",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Georgia and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "HI",
+    "state_name": "Hawaii",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Hawaii and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "ID",
+    "state_name": "Idaho",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Idaho and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "IL",
+    "state_name": "Illinois",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Illinois and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "IN",
+    "state_name": "Indiana",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Indiana and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "IA",
+    "state_name": "Iowa",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Iowa and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "KS",
+    "state_name": "Kansas",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Kansas and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "KY",
+    "state_name": "Kentucky",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Kentucky and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "LA",
+    "state_name": "Louisiana",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Louisiana and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "ME",
+    "state_name": "Maine",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Maine and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "MD",
+    "state_name": "Maryland",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Maryland and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "MA",
+    "state_name": "Massachusetts",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Massachusetts and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "MI",
+    "state_name": "Michigan",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Michigan and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "MN",
+    "state_name": "Minnesota",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Minnesota and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "MS",
+    "state_name": "Mississippi",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Mississippi and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "MO",
+    "state_name": "Missouri",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Missouri and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "MT",
+    "state_name": "Montana",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Montana and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "NE",
+    "state_name": "Nebraska",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Nebraska and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "NV",
+    "state_name": "Nevada",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Nevada and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "NH",
+    "state_name": "New Hampshire",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for New Hampshire and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "NJ",
+    "state_name": "New Jersey",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for New Jersey and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "NM",
+    "state_name": "New Mexico",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for New Mexico and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "NY",
+    "state_name": "New York",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for New York and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "NC",
+    "state_name": "North Carolina",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for North Carolina and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "ND",
+    "state_name": "North Dakota",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for North Dakota and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "OH",
+    "state_name": "Ohio",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Ohio and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "OK",
+    "state_name": "Oklahoma",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Oklahoma and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "OR",
+    "state_name": "Oregon",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Oregon and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "PA",
+    "state_name": "Pennsylvania",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Pennsylvania and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "RI",
+    "state_name": "Rhode Island",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Rhode Island and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "SC",
+    "state_name": "South Carolina",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for South Carolina and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "SD",
+    "state_name": "South Dakota",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for South Dakota and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "TN",
+    "state_name": "Tennessee",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Tennessee and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "TX",
+    "state_name": "Texas",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Texas and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "UT",
+    "state_name": "Utah",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Utah and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "VT",
+    "state_name": "Vermont",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Vermont and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "VA",
+    "state_name": "Virginia",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Virginia and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "WA",
+    "state_name": "Washington",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Washington and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "WV",
+    "state_name": "West Virginia",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for West Virginia and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "WI",
+    "state_name": "Wisconsin",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Wisconsin and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "WY",
+    "state_name": "Wyoming",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for Wyoming and update rules."
+    ],
+    "rules": []
+  },
+  {
+    "state_code": "DC",
+    "state_name": "District of Columbia",
+    "status": "missing",
+    "last_verified": "2026-02-05",
+    "source_primary_url": null,
+    "notes": [],
+    "todo": [
+      "Research UI family-member employment exclusions for District of Columbia and update rules."
+    ],
+    "rules": []
+  }
+]

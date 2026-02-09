@@ -1,0 +1,59 @@
+:root {
+  --color-bg: #0b0f17;
+  --color-surface: #0f141d;
+  --color-line: #1b2230;
+  --color-text: #e6ebf5;
+  --color-text-subtle: #aab4c3;
+  --color-primary: #3ad0a1;
+
+  --shadow-soft: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.bg-bg { background-color: var(--color-bg); }
+.bg-surface { background-color: var(--color-surface); }
+.text-text { color: var(--color-text); }
+.text-subtle { color: var(--color-text-subtle); }
+.border-line { border-color: var(--color-line); }
+.bg-primary { background-color: var(--color-primary); }
+
+:root {
+  /* Brand */
+  --bg: #FAFAFA;           /* Soft White */
+  --text: #111111;         /* Charcoal */
+  --primary: #74F2D0;      /* Electric Mint */
+  --error: #F04438;
+
+  /* Surfaces */
+  --surface: #FFFFFF;
+  --line: #EAEAEA;
+
+  /* Type scale (clamp for responsive rhythm) */
+  --h1: clamp(2.5rem, 2rem + 2.2vw, 3.75rem);   /* 40→60 */
+  --h2: clamp(1.75rem, 1.4rem + 1vw, 2.25rem);  /* 28→36 */
+  --h3: clamp(1.25rem, 1.1rem + .6vw, 1.5rem);  /* 20→24 */
+  --body: 1rem;                                  /* 16 */
+
+  /* Radii / shadows */
+  --radius: 8px;
+  --shadow-sm: 0 1px 2px rgba(17,17,17,.04);
+  --shadow-md: 0 10px 30px rgba(17,17,17,.06);
+
+  /* Motion */
+  --ease: cubic-bezier(.2,.8,.2,1);
+  --dur-1: 160ms;
+}
+
+/* Base page skin */
+html, body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Simple fade-up you can reuse */
+.fade-up {
+  animation: fadeUp var(--dur-1) var(--ease) both;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

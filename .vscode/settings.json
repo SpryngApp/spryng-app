@@ -1,0 +1,12 @@
+{
+  "files.associations": {
+    "globals.css": "postcss"
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "less.lint.unknownAtRules": "ignore",
+  "css.validate": true,
+  "tailwindCSS.includeLanguages": {
+    "postcss": "css"
+  }
+}

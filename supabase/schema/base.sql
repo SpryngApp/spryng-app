@@ -1,0 +1,2 @@
+-- Elevyn base schema placeholder
+-- Run in Supabase SQL Editor after copying real schema

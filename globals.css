@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom global styles */
+html, body {
+  background-color: #FAFAFA;
+  color: #111111;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Söhne', 'Neue Montreal', Inter, sans-serif;
+}

@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------------------------------------------- */
+/* Brand tokens (use RGB channels so Tailwind can do rgb(var(--brand)) )       */
+/* -------------------------------------------------------------------------- */
+:root {
+  /* neutrals */
+  --bg: 250 250 250;        /* #FAFAFA */
+  --text: 17 17 17;         /* #111111 */
+
+  /* brand */
+  --brand: 116 242 208;     /* #74F2D0 */
+  --brand-hover: 86 232 198;
+  --brand-soft: 116 242 208;
+
+  /* misc */
+  --error: 240 68 56;       /* #F04438 */
+}
+
+/* Base typography */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: rgb(var(--bg));
+  color: rgb(var(--text));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings use the same system (font-heading mapped in tailwind if you have it;
+   if not, this still looks clean because layout sets --font-sans) */
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.01em;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Buttons + layout helpers                                                   */
+/* -------------------------------------------------------------------------- */
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium transition;
+}
+
+.btn-primary {
+  @apply bg-[color:rgb(var(--brand))] text-black hover:opacity-90 active:opacity-85;
+}
+
+.btn-ghost {
+  @apply border border-neutral-300 text-neutral-800 hover:bg-neutral-100 active:bg-neutral-200;
+}
+
+.container {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
