@@ -1,6 +1,6 @@
-// app/signup/page.tsx
+// app/onboarding/company/page.tsx
 import { sanitizeNextPath } from "@/lib/supabase/env";
-import SignupClient from "./signup.client";
+import CompanyOnboardingClient from "./company.client";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -10,16 +10,14 @@ type PageProps = {
   searchParams?: Promise<Record<string, string | string[] | undefined>>;
 };
 
-export default async function SignupPage(props: PageProps) {
+export default async function CompanyOnboardingPage(props: PageProps) {
   const sp = (await props.searchParams) ?? {};
   const nextRaw = Array.isArray(sp.next) ? sp.next[0] : sp.next;
 
-  // For signup, default to /onboarding
+  // Where to go after onboarding succeeds
   const nextPath =
-    sanitizeNextPath(
-      typeof nextRaw === "string" ? nextRaw : "/onboarding",
-      "/onboarding"
-    ) || "/onboarding";
+    sanitizeNextPath(typeof nextRaw === "string" ? nextRaw : "/app", "/app") ||
+    "/app";
 
-  return <SignupClient nextPath={nextPath} />;
+  return <CompanyOnboardingClient nextPath={nextPath} />;
 }
